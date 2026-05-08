@@ -17,7 +17,7 @@ class Body:
         return f"Mass: {self.mass}\nPosition: {self.pos}\nAcceleration: {self.acc}\nVelocity: {self.vel}"
     
     def applyforce(self, force: Vector):
-        self.acc = force*(1/self.mass)
+        self.acc = self.acc+(force*(1/self.mass))
         
     def releaseForce(self):
         self.applyforce(Vector())
