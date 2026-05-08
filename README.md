@@ -138,7 +138,6 @@ That is a sensible early-engine workflow because the math stays visible and easy
 - Add `__sub__`, `__truediv__`, and equality support to `Vector`.
 - Add type hints consistently across all methods.
 - Avoid using `Vector()` as a default argument in `Body.__init__`; use `None` and create a new vector inside the constructor.
-- Decide whether multiple forces should stack. Right now, `applyforce` replaces acceleration instead of accumulating net force.
 - Rename methods to standard Python style, such as `apply_force` and `release_force`.
 - Add unit tests for vector operations, force application, impulse, and position updates.
 - Keep `test.py` tracked if it is meant to be an example, or move examples into an `examples/` folder.
