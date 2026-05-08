@@ -34,7 +34,7 @@ class Body:
         time = time
         self.pos+=((self.vel*time)+0.5*(self.acc)*time*time)
         self.vel+=(self.acc*time)
-        self.momentum = self.mass*self.velocity
+        self.momentum = self.mass*self.vel
         
 if __name__ == '__main__':
     F = Vector(x=10)
