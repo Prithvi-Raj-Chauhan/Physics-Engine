@@ -3,10 +3,17 @@ from engine.constants import *
 from engine.vectors import Vector
 
 if __name__ == "__main__":
-    pos = Vector(3,4,0)
-    force = Vector(1,0,0)
-    BODY = Body(1, pos)
+    VELOCITY = Vector()
+    ball1 = Body(100, Vector(), VELOCITY)
+    ball2 = Body(10, Vector(), Vector(10,0,0)) 
     
-    print("Initial: ", BODY.vel)
-    BODY.impulse(force, 2)
-    print("AFTER: ", BODY.vel)
+    ENGINE = Engine()
+    ENGINE.addBody(ball1)
+    ENGINE.addBody(ball2)
+    ENGINE.applyGravity()
+    
+    for _ in range(1,10):
+        ENGINE.update(1)
+        for body in ENGINE.bodies:
+            print(body.pos, end=" ")
+        print()
