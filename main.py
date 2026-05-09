@@ -1,6 +1,7 @@
 from engine.bodies import Body
 from engine.constants import *
 from engine.vectors import Vector
+from engine.physics import Engine
 
 if __name__ == "__main__":
     VELOCITY = Vector()
