@@ -19,13 +19,13 @@ class Body:
     def applyforce(self, force: Vector):
         self.acc = self.acc+(force*(1/self.mass))
         
-    def releaseForce(self):
-        self.applyforce(Vector())
+    def releaseForce(self, force: Vector):
+        self.applyforce(-1*force)
         
     def impulse(self,force: Vector, time):
         self.applyforce(force)
         self.update(time)
-        self.releaseForce()
+        self.releaseForce(force)
         
     def update(self, time):
         """
