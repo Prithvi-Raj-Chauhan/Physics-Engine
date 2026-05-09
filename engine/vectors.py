@@ -28,3 +28,4 @@ if __name__=="__main__":
     B = Vector(1,0,2)
     print(A+B)
     print(A*3)
+    print(-1*A)
